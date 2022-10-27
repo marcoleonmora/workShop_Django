@@ -7,6 +7,7 @@ class Categoria(models.Model):
     
     def __str__(self): 
         return self.descripCategoria 
+    
         
     class Meta: 
         verbose_name = 'categorias' 
