@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- BLOQUE PRINCIPAL    -->
+{% block content %}
+<h2>{{titulo}}</h2>
+<div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
+
+    <div class="col-12 col-md-4 offset-md-4">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">{{producto.nombre}}</h4>
+            </div>
+            <img src="/media/productos/{{producto.imgGrande}}" alt="X">
+            <div class="card-body">
+
+                <h1 class="Card subtitle pricing-card-title">${{producto.precioUnitario}}</h1>
+                <h4 class="text-muted fw-light">/{{producto.unidad}}</h4>
+                <br>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <p>{{producto.descripcion}}</p>
+                    <p>{{producto.existencia}} en existencia</p>
+                </ul>
+                <a href="{% url 'agregarCarro' producto.id %}" type="button"
+                    class="w-100 btn btn-lg btn-outline-primary">Agregar al
+                    carrito</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<!-- FIN BLOQUE PRINCIPAL -->

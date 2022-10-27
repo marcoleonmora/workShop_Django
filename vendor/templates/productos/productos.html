@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+    <div class="mb-3 descripcion text-center">
+        <h2>{{titulo}}</h2>
+    </div>
+    
+    <div class="row">
+    
+        <table class="table">
+            <thead>
+                <th></th>
+                <th>nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Existencia</th>
+                <th></th>
+            </thead>
+            <tbody>
+                {% for prod in productos %}
+                <tr>
+                    <td><img src="/media/iconos/{{prod.imgPeque}}" alt="X"> </td>
+                    <td>{{prod.nombre}}</td>
+                    <td>{{prod.descripcion}}</td>
+                    <td>{{prod.precioUnitario}}</td>
+                    <td>{{prod.existencia}}</td>
+                    <td><a href="{% url 'un_producto' prod.id %}" type="button" class="btn btn-info">Ver detalle</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+

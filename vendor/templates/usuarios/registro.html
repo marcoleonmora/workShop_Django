@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<div class="mb-3 descripcion">
+    <h4>Registro de Usuario</h4>
+</div>
+
+<div class="mb-3">
+    <form enctype="multipart/form-data" action="{% url 'registro' %}" method="POST">
+        {% csrf_token %}
+        {% load widget_tweaks %}
+
+        <div class="row g-3">
+            {% for field in form %}
+            <div class="col-12 form-group">
+                <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                {% render_field field class="form-control" %}
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+        <div class="row justify-content-end">
+            <div class="mb-3 col-6">
+                <input type="submit" value="Registarse en el Sistema" class="form-control btn btn-warning" />
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

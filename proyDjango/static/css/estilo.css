@@ -1,0 +1,83 @@
+:root {
+    --fondo1: beige;
+    --fondo2:white;
+    --fondo3: SeaGreen;
+    --fondo4: rgb(213, 213, 213);
+    --color-text1: SeaGreen;
+    --color-text2: rgb(253, 105, 15);
+    --color-text3: rgb(31,132,123);    
+    --color-Select: rgb(31,132,123);
+    --boton1: Teal;
+    --boton2: SlateGray;
+    --boton3: Goldenrod;
+}
+
+body{ 
+    background-color: var(--fondo4); 
+    color: var(--color-text1);
+}
+
+.contenedor{ 
+    background-color: var(--fondo1);
+}
+
+.contenido{ 
+    width: 100%;
+    padding: 20px;
+}
+
+#encabezado{
+    background-color: rgb(247, 247, 247);
+    background-size: cover;
+    color: var(--color-text3);
+    margin: 0;
+    font-family: '../fonts/Roboto', sans-serif;
+}
+
+#encabezado img{
+    width: 100%;
+}
+
+#titulo{
+    text-align: center;
+    color: var(--color-text1);
+    margin-top: 5%;
+}
+
+#saludo{
+    margin-top: 10%;
+}
+
+
+#titulo > h1{
+    font-size: 2.2em;
+
+}
+
+.table{
+    margin-left: 10%;
+    width: 90%;
+}
+/********* BOTONES Y ENLACES *****************/
+.nav-link, a, #tituloPie, .dropdown-item{
+    color: var(--color-text1);
+}
+
+a:hover{color: var(--color-Select);}
+
+.boton1{
+    background-color: var(--boton1);
+    color: var(--fondo2);
+}
+.boton1:hover{
+    background-color: var(--boton2);
+    color: var(--fondo2);
+}
+
+.btn-carrito{
+    width: 100%;
+    padding: 3px;
+    margin-top: 2px;
+}
+
+
