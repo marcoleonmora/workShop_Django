@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'appProductos',
     'appUsuarios',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -112,6 +113,17 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+
+
+#*************** EMAIL *************************************
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'mleonpruebas@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = True
+
+
 
 
 # Static files (CSS, JavaScript, Images)

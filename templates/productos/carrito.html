@@ -22,12 +22,12 @@
             <th><input type="number" name="cantidad" id="cantidad_{{prod.id}}" onchange="cambiarCantidad({{prod.id}})"
                     value="{{prod.cantidad}}" min="1" style="width: 80px;" data-preciou="{{prod.valUnit}}"></th>
 
-            <td><img src="{{prod.imgPeque.url }}" alt="X"></td>
+            <td><img src="/media/{{prod.imgPeque}}" alt="X"></td>
             <td>{{ prod.nombre }}</td>
             <td>{{prod.valUnit}}/{{prod.unidad}}</td>
             <td id="total_{{prod.id}}">${{prod.total}}</td>
             <td>
-                <a href="" class="btn btn-danger btn-carrito">Eliminar</a>
+                <a href="{% url 'eliminar'  prod.id %}" class="btn btn-danger btn-carrito">Eliminar</a>
                 <a href="{% url 'detalle'  prod.prodId %}" class="btn btn-info btn-carrito">Detalle</a>
             </td>
         </tr>
@@ -49,7 +49,7 @@
         <h6><strong id="total">${{ total }}</strong></h6>
     </div>
 
-    <a href="" class="btn btn-info btn-carrito">Pagar</a>
+    <a href="{% url 'pagar'  %}" class="btn btn-info btn-carrito">Pagar</a>
 </div>
 
 <!-- FIN BLOQUE PRINCIPAL -->
