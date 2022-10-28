@@ -24,7 +24,7 @@
                     <td>{{prod.descripcion}}</td>
                     <td>{{prod.precioUnitario}}</td>
                     <td>{{prod.existencia}}</td>
-                    <td><a href="" type="button" class="btn btn-info">Ver detalle</a></td>
+                    <td><a href="{% url 'detalle' prod.id %}" type="button" class="btn btn-info">Ver detalle</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

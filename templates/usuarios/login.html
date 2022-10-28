@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<div class="mb-3 descripcion text-center">
+    <h4>Ingreso</h4>
+</div>
+
+<div class="col-md-4 offset-md-4 mb-3">
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+
+        <div class="row">
+            <div class="mb-3 col-12">
+                <label for="correo" class="form-label">Correo:</label>
+                <input type="email" class="form-control" name="email" id="correo">
+            </div>
+            <div class="mb-3 col-12">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" class="form-control" name="password" id="password">
+            </div>
+
+            <div class="mb-3 col-12">
+                <input type="submit" value="Ingresar" class="form-control btn btn-warning" />
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
